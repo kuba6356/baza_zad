@@ -48,13 +48,13 @@ function addNewEntry() {
 
     // Hide the form after submission
     document.getElementById('formContainer').style.display = 'none';
-    document.querySelector("body").classList.toggle("hideScroll")
+
 }
 
 document.getElementById('add').addEventListener('click', () => {
     // Show the form when the "Add" button is clicked
     document.getElementById('formContainer').style.display = 'block';
-    document.querySelector("body").classList.toggle("hideScroll");
+
 });
 
 export {addNewEntry}
