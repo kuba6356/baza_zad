@@ -1,0 +1,235 @@
+/* General reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7fc;
+  font-family: Arial, sans-serif;
+}
+
+/* Header and navigation */
+header {
+  background-color: #4CAF50;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+button,
+input[type="search"],
+select,
+input[type="file"] {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button styles */
+button {
+  background-color: #ffffff;
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #45a049; /* Darker green */
+  color: #ffffff; /* Change text to white */
+  transform: scale(1.05); /* Slightly scale up */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+button:active {
+  transform: scale(1); /* Reset scale when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow */
+}
+
+/* Input search and select hover effects */
+input[type="search"]:hover,
+select:hover {
+  border-color: #45a049;
+}
+
+input[type="search"]:focus,
+select:focus {
+  border-color: #4CAF50; 
+}
+
+/* Table layout styling */
+#container {
+  display: flex;
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+  width: 100%;
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  gap: 10px; /* Add space between columns */
+}
+
+.checkbox,
+.index,
+.name,
+.surname,
+.address,
+.pesel,
+.gender {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 150px; /* Allow columns to grow or shrink */
+  min-width: 150px; /* Prevent columns from becoming too narrow */
+}
+
+.checkbox div,
+.index div,
+.name div,
+.surname div,
+.address div,
+.pesel div,
+.gender div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #d0d0d0;
+  text-align: center;
+  height: 50px; /* Height for consistent appearance */
+}
+
+.checkbox div input {
+  margin: 0;
+}
+
+.black {
+  background-color: #d9d9d9;
+  font-weight: bold;
+}
+
+.DB_value {
+  background-color: white;
+}
+
+.checkbox div:nth-child(odd),
+.index div:nth-child(odd),
+.name div:nth-child(odd),
+.surname div:nth-child(odd),
+.address div:nth-child(odd),
+.pesel div:nth-child(odd),
+.gender div:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.checkbox div input:checked {
+  background-color: #4caf50;
+}
+
+.checkbox div,
+.index div,
+.name div,
+.surname div,
+.address div,
+.pesel div,
+.gender div {
+  border-bottom: 1px solid #d0d0d0;
+}
+
+/* Optional: Adjust the styling for mobile or smaller screens */
+@media (max-width: 1024px) {
+  #container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #container > div {
+    margin-bottom: 10px;
+    flex: 1 1 150px; /* Allow columns to shrink and grow */
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column; /* Stack the columns vertically on smaller screens */
+  }
+
+  #container > div {
+    width: 100%; /* Columns take full width on smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .checkbox div,
+  .index div,
+  .name div,
+  .surname div,
+  .address div,
+  .pesel div,
+  .gender div {
+    padding: 5px; /* Smaller padding on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+  }
+}
+
+/* Styling for the form container */
+#formContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#addForm label {
+  font-weight: bold;
+}
+
+#addForm input[type="text"],
+#addForm input[type="number"],
+#addForm input[type="file"],
+#addForm select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+#addForm input[type="radio"] {
+  margin-right: 10px;
+}
+
+#submitAdd {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#submitAdd:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#submitAdd:active {
+  transform: scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
